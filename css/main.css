@@ -37,6 +37,49 @@ ul {
 	margin-bottom: 20px;
 }
 
+.first-image {
+	height: 600px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
+.double {
+	height: 400px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
+.last {
+	height: 700px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
+
+.large-image {
+	height: 600px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
+.two-image {
+	height: 400px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
+.triple-image {
+	height: 200px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
+.about-image {
+	height: 400px;
+    background-color: gray;
+	margin-bottom: 20px;
+}
+
 .bottom-nav {
 	height: 50px;
     background-color: blue;
@@ -220,6 +263,8 @@ body {
 /*-------------- --------------*/
 
 @media screen and (max-width: 768px) {
+	
+	
 
 }
 
