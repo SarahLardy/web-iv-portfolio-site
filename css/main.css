@@ -11,7 +11,11 @@
 
 --------------------------------4 Margins and Padding
 
---------------------------------5 Image Hover State
+--------------------------------5 Images
+
+--------------------------------6 Typography
+
+--------------------------------7 Image Hover State
 --------------------------------------------*/
 
 /*---------------------------------------------------------------------1 Navigation----------*/
@@ -22,57 +26,31 @@ ul {
 .icon ul li {
 	float: right;
 	display: inline-block;
-	margin-right: 4rem;
+	margin-right: .75rem;
 }
+
 
 /*---------------------------------------------------------------------2 Widths and Heights----------*/
-.image {
-	height: 300px;
-}
 
-.first-image, .large-image {
-	height: 600px;
-}
 
-.double, .two-image, .about-image {
-	height: 400px;
-}
 
-.last {
-	height: 700px;	
-}
-
-.triple-image {
-	height: 200px;
-}
-
-.logo, .previous, .next {
-	height: 50px;
-}
 /*---------------------------------------------------------------------3 Backgrounds----------*/
-.image, .first-image, .double, .last, .large-image, .two-image, .triple-image, .about-image, .bottom-nav {
-    background-color: gray;
+
+body {
+	background-image: url(../img/watercolor-background.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
 }
 
-.logo {
-    background-color: green;
-}
 
-.previous, .next {
-	background-color: blue;
-}
 
 /*---------------------------------------------------------------------4 Margins and Padding----------*/
 
-.image, .first-image, .double, .last, .large-image, .two-image, .triple-image, .about-image, .column, .columns, .logo   {
+.image, .two-small, .lrg-small .first-image, .double, .last, .large-image, .two-image, .triple-image, .about-image, .column, .columns {
 	margin-bottom: 20px;
 }
 
-.bottom-nav {
-	margin-top: 0;
-}
-
-body, #bottom {
+body {
 	margin-top: 50px;
 }
 
@@ -81,12 +59,74 @@ body, #bottom {
 	position: fixed;
 }
 
-#bottom {
-	margin-bottom: 50px;
-	
+.first-image {
+	padding-bottom:30px;
 }
 
-/*---------------------------------------------------------------------5 Image Hover State----------*/
+.bottom-button {
+	margin-top: 40px;
+}
+
+#bottom {
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+#pages {
+	margin-right: 100px;
+}
+
+.previous a {
+	padding-left: 20px;
+}
+
+.next a {
+	padding-left: 30px;
+}
+
+/*---------------------------------------------------------------------5 Images----------*/
+
+.previous, .next {
+  background-image: url(../img/previous-next-button.png);
+  background-repeat:no-repeat;
+  padding:10px;
+}
+
+.previous a, .next a {
+	color: white;
+	text-decoration: none;
+}
+
+
+.bottom-button a {
+	background-image: url(../img/botton-button.png);
+ 	background-size:100%;
+  	background-repeat:no-repeat;
+  	padding:10px;
+  	color:white;
+  	text-decoration:none;
+}
+
+/*---------------------------------------------------------------------6 Typography----------*/
+h1, .overlay-fade-in h2 {
+	font-family: 'Pacifico', cursive;
+	color: #22bbb4;
+}
+
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	color: #22bbb4;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+ul li {
+	font-size: 1.25rem;
+}
+
+/*---------------------------------------------------------------------7 Image Hover State----------*/
 .image-wrapper {
   width: 100%;
   height: 100%;
@@ -104,8 +144,8 @@ body, #bottom {
 }
 
 .overlay-fade-in p {
-  color: #f4f4f4;
-  font-size: 28px;
+  color: #fff;
+  font-size: 25px;
   opacity: 0;
   transition: all 0.2s linear; 
 }
@@ -117,34 +157,21 @@ body, #bottom {
 .overlay-fade-in .image-overlay-content { /* CHANGES IMAGE */
   opacity: 0;
   transition: all 0.4s ease-in-out; 
-  background-image: url(../img/GREEN-LOGO.png);
+  background-image: url(../img/blue-watercolor-hover.png);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top;
+  background-size: 80%;
+  background-position: center;
   width: 100%;
 }
   
 .overlay-fade-in h2 {
-  color: #f2f2f2;
-  font-size: 1.8rem;
+  color: #fff;
+  font-size: 1.5rem;
   margin-top: 40%;
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-
-.overlay-fade-in .button {
-  display: inline-block;
-  color: #222;
-  text-transform: uppercase;
-  position: relative;
-  opacity: 0;
-  transition: all 0.2s ease-in-out; 
-}
-  
-  .overlay-fade-in .button:hover {
-    box-shadow: 0 0 5px #000; 
-}
-	
+ 
 .overlay-fade-in:hover img {
   transform: scale(1.2); 
 }
@@ -156,162 +183,86 @@ body, #bottom {
 .overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
   opacity: 1;
 }
-   
-.overlay-fade-in:hover p {
-  transition-delay: 0.1s; 
-}
-  
-.overlay-fade-in:hover .button {
-  transition-delay: 0.2s; 
-}
-  
-.overlay-slide-in-left img {
-  transition: all 0.3s ease-in-out; 
-}
-  
-.overlay-slide-in-left h2 {
-  font-size: 1.8rem;
-  background: rgba(255, 255, 255, 0.7);
-  margin-top: 40%;
-  color: #000;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); 
-}
-  
-.overlay-slide-in-left p {
-  opacity: 0;
-  color: #333;
-  transition: all 0.2s linear;
-}
-   
-.overlay-slide-in-left .button {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-  border-radius: 7px;
-}
-   
-.overlay-slide-in-left .button:hover {
-    background-color: #444; 
-}
 
-.overlay-slide-in-left:hover .image-overlay-content {
-  transform: translateX(0px); 
-}
-
-.overlay-slide-in-left:hover img {
-  transform: translateX(80%);
-  transition-delay: 0.1s; 
-}
-.overlay-slide-in-left:hover p {
-  opacity: 1;
-  transition-delay: 0.4s; 
-}
-
-.overlay-fade-in-new-background .button {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  background: #000;
-  color: #fff;
-  text-transform: uppercase;
-  border-radius: 5px;
-  box-shadow: 0 0 1px #000;
-  position: relative;
-  opacity: 0;
-  transition: all 0.2s ease-in-out; 
-}
-
-.overlay-fade-in-new-background .button:hover {
-    box-shadow: 0 0 5px #fff;
-    background-color: #222; 
-}
-
-.overlay-fade-in-new-background p {
-  font-size: 28px; 
-}
-.overlay-fade-in-new-background .image-overlay-content {
-  opacity: 0;
-  background-image: url(http://subtlepatterns.com/patterns/gplaypattern.png);
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.4s ease-in-out; 
-}
-
-.overlay-fade-in-new-background h2 {
-  color: #000;
-  font-size: 1.6rem;
-  margin-top: 30%;
-  opacity: 0;
-  transition: all 0.2s ease-in-out; 
-}
-
-.overlay-fade-in-new-background p {
-  opacity: 0;
-  transition: all 0.2s linear; 
-}
-
-.overlay-fade-in-new-background img {
-  transition: all 0.2s ease-in-out; 
-}
-
-.overlay-fade-in-new-background:hover img {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  filter: gray;
-  -webkit-filter: grayscale(100%);
-  transform: scale(1.5); 
-}
-
-.overlay-fade-in-new-background:hover .image-overlay-content {
-  opacity: 1; 
-}
-
-.overlay-fade-in-new-background:hover h2, .overlay-fade-in-new-background p, .overlay-fade-in-new-background .button {
-  opacity: 1; 
-}
-
-.overlay-fade-in-new-background:hover p {
-  transition-delay: 0.1s; 
-}
-
-.overlay-fade-in-new-background:hover .button {
-  transition-delay: 0.2s; 
-}
-
-
-
-/*-------------- Tablet Size --------------*/
-
-@media screen and (max-width: 768px) {
-	
-	
-
-}
-
-/*-------------- Mobile Size --------------*/
-
-
-@media screen and (max-width: 480px) {
+/*--------------------------------------------------------------------Media Queries --------------*/
+/* Small only */
+@media screen and (max-width: 39.9375em) {
 	.side-nav {
 		padding-left: 50px;
 		position: static;
 	}
 	
-	ul {
-		float: left;
-	}
-	
 	ul li {
 		display: inline-block;
-		margin-right: 1rem;
+		padding-left: 15px;
 	}
 
-	#bottom {
+	#bottom, h1, h2, p, ul li {
 		text-align: center;
 	}
 	
-	.icon {
-		padding-left: 55px;
+	.icon ul li {
+		float: left;
+		display: inline-block;
 	}
 	
+	#bottom {
+		margin-top: 0;
+	}
+	
+	p {
+		font-size: 14px;
+	}
+	
+	h1 {
+		font-size: 40px;
+	}
+	
+	h2 {
+		font-size: 30px;
+	}
+	
+	.bottom-nav {
+		margin-top: 0;
+	}
+	
+	}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	.logo img {
+		position: fixed;
+    	max-width: 7rem;
+	}
+	.side-nav {
+    	padding-left: 50px;
+    	position: fixed;
+    	top: 10rem;
+	}
 }
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	.icon ul li {
+		float: right;
+		display: inline-block;
+		margin-left: .25rem;
+	}
+	
+	.icon img {
+		padding-right: .25rem;
+		height: 50px;
+		width: 50px;
+	}
+		
+		
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+
+	
+	}
