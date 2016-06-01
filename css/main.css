@@ -72,10 +72,6 @@ body {
 	margin-bottom: 50px;
 }
 
-#pages {
-	margin-right: 100px;
-}
-
 .previous a {
 	padding-left: 20px;
 }
@@ -83,6 +79,11 @@ body {
 .next a {
 	padding-left: 30px;
 }
+
+#pages {
+	padding-right: 20px;
+}
+
 
 /*---------------------------------------------------------------------5 Images----------*/
 
@@ -108,9 +109,14 @@ body {
 }
 
 /*---------------------------------------------------------------------6 Typography----------*/
-h1, .overlay-fade-in h2 {
+h1  {
 	font-family: 'Pacifico', cursive;
 	color: #22bbb4;
+}
+
+.overlay-fade-in-square h2, .overlay-fade-in-portrait h2, .overlay-fade-in-landscape h2 {
+	font-family: 'Pacifico', cursive;
+	color: #fff;
 }
 
 h2 {
@@ -143,18 +149,18 @@ ul li {
   left: 0; 
 }
 
-.overlay-fade-in p {
+.overlay-fade-in p, .overlay-fade-in-square p, .overlay-fade-in-portrait p, .overlay-fade-in-landscape p  {
   color: #fff;
   font-size: 25px;
   opacity: 0;
   transition: all 0.2s linear; 
 }
   
-.overlay-fade-in img {
+.overlay-fade-in img, .overlay-fade-in-square img, .overlay-fade-in-portrait img, .overlay-fade-in-landscape img {
   transition: all 0.2s linear; 
 }
   
-.overlay-fade-in .image-overlay-content { /* CHANGES IMAGE */
+.overlay-fade-in .image-overlay-content, .overlay-fade-in-square .image-overlay-content, .overlay-fade-in-portrait .image-overlay-content, .overlay-fade-in-landscape .image-overlay-content  { /* CHANGES IMAGE */
   opacity: 0;
   transition: all 0.4s ease-in-out; 
   background-image: url(../img/blue-watercolor-hover.png);
@@ -164,23 +170,39 @@ ul li {
   width: 100%;
 }
   
-.overlay-fade-in h2 {
+.overlay-fade-in h2, .overlay-fade-in-square h2, .overlay-fade-in-landscape h2 {
   color: #fff;
   font-size: 1.5rem;
-  margin-top: 40%;
+  margin-top: 43%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.overlay-fade-in-portrait h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 60%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.overlay-fade-in-landscape h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 30%;
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
  
-.overlay-fade-in:hover img {
+.overlay-fade-in:hover img, .overlay-fade-in-square:hover img, .overlay-fade-in-portrait:hover img, .overlay-fade-in-landscape:hover img {
   transform: scale(1.2); 
 }
   
-.overlay-fade-in:hover .image-overlay-content {
+.overlay-fade-in:hover .image-overlay-content, .overlay-fade-in-square:hover .image-overlay-content, .overlay-fade-in-portrait:hover .image-overlay-content, .overlay-fade-in-landscape:hover .image-overlay-content {
   opacity: 1; 
 }
   
-.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
+.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button, .overlay-fade-in-square:hover h2, .overlay-fade-in-square p, .overlay-fade-in-square .button,.overlay-fade-in-portrait:hover h2, .overlay-fade-in-portrait p, .overlay-fade-in-portrait .button, .overlay-fade-in-landscape:hover h2, .overlay-fade-in-landscape p, .overlay-fade-in-landscape .button    {
   opacity: 1;
 }
 
@@ -226,7 +248,11 @@ ul li {
 		margin-top: 0;
 	}
 	
+	#pages {
+		padding-left: 50px;
 	}
+	
+}
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
