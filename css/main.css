@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,600,400);
 @charset "UTF-8";
 /* CSS Document */
 
@@ -24,8 +26,8 @@ ul {
 }
 
 .icon ul li {
-	float: right;
 	display: inline-block;
+	float: right;
 	margin-right: .75rem;
 }
 
@@ -88,9 +90,9 @@ body {
 /*---------------------------------------------------------------------5 Images----------*/
 
 .previous, .next {
-  background-image: url(../img/previous-next-button.png);
-  background-repeat:no-repeat;
-  padding:10px;
+  	background-image: url(../img/previous-next-button.png);
+ 	background-repeat: no-repeat;
+  	padding: 10px;
 }
 
 .previous a, .next a {
@@ -109,22 +111,12 @@ body {
 }
 
 /*---------------------------------------------------------------------6 Typography----------*/
-h1  {
-	font-family: 'Pacifico', cursive;
-	color: #22bbb4;
-}
-
-.overlay-fade-in-square h2, .overlay-fade-in-portrait h2, .overlay-fade-in-landscape h2 {
+h1, .overlay-fade-in-square h2, .overlay-fade-in-portrait h2, .overlay-fade-in-landscape h2  {
 	font-family: 'Pacifico', cursive;
 	color: #fff;
 }
 
-h2 {
-	font-family: 'Josefin Sans', sans-serif;
-	color: #22bbb4;
-}
-
-body {
+h2, body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -132,95 +124,85 @@ ul li {
 	font-size: 1.25rem;
 }
 
+h1, h2 {
+	color: #22bbb4;
+}
+
 /*---------------------------------------------------------------------7 Image Hover State----------*/
+.image-wrapper, .image-overlay-content {
+	height: 100%;
+	overflow: hidden;
+}
+
 .image-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
+  	width: 100%;
+  	position: relative;
+  	text-align: center;
 }
 
 .image-overlay-content {
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0; 
+  	position: absolute;
+  	top: 0;
+  	left: 0; 
+}
+ 
+.overlay-fade-in .image-overlay-content, .overlay-fade-in-square .image-overlay-content, .overlay-fade-in-portrait .image-overlay-content, .overlay-fade-in-landscape .image-overlay-content  { /* CHANGES IMAGE */
+  	opacity: 0;
+  	transition: all 0.4s ease-in-out; 
+  	background-image: url(../img/blue-watercolor-hover.png);
+  	background-repeat: no-repeat;
+  	background-size: 80%;
+  	background-position: center;
+  	width: 100%;
+}
+  
+.overlay-fade-in h2, .overlay-fade-in-square h2, .overlay-fade-in-landscape h2, .overlay-fade-in-portrait h2, .overlay-fade-in p, .overlay-fade-in-square p, .overlay-fade-in-portrait p, .overlay-fade-in-landscape p {
+  	color: #fff;
 }
 
-.overlay-fade-in p, .overlay-fade-in-square p, .overlay-fade-in-portrait p, .overlay-fade-in-landscape p  {
-  color: #fff;
-  font-size: 25px;
-  opacity: 0;
-  transition: all 0.2s linear; 
+.overlay-fade-in h2, .overlay-fade-in-square h2, .overlay-fade-in-landscape h2, .overlay-fade-in-portrait h2, .overlay-fade-in-landscape h2 {
+	font-size: 1.5rem;
 }
-  
-.overlay-fade-in img, .overlay-fade-in-square img, .overlay-fade-in-portrait img, .overlay-fade-in-landscape img {
-  transition: all 0.2s linear; 
-}
-  
-.overlay-fade-in .image-overlay-content, .overlay-fade-in-square .image-overlay-content, .overlay-fade-in-portrait .image-overlay-content, .overlay-fade-in-landscape .image-overlay-content  { /* CHANGES IMAGE */
-  opacity: 0;
-  transition: all 0.4s ease-in-out; 
-  background-image: url(../img/blue-watercolor-hover.png);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
-  width: 100%;
-}
-  
 .overlay-fade-in h2, .overlay-fade-in-square h2, .overlay-fade-in-landscape h2 {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-top: 43%;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+  	margin-top: 43%;
+}
+
+.overlay-fade-in-portrait h2, .overlay-fade-in h2, .overlay-fade-in-square h2, .overlay-fade-in-landscape h2, .overlay-fade-in p, .overlay-fade-in-square p, .overlay-fade-in-portrait p, .overlay-fade-in-landscape p  {
+	opacity: 0;
+ 	transition: all 0.2s ease-in-out;
 }
 
 .overlay-fade-in-portrait h2 {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-top: 60%;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+  	margin-top: 60%;
 }
 
 .overlay-fade-in-landscape h2 {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-top: 30%;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+  	margin-top: 30%;
 }
- 
+
+.overlay-fade-in p, .overlay-fade-in-square p, .overlay-fade-in-portrait p, .overlay-fade-in-landscape p  {
+  	font-size: 25px;
+}
+
+.overlay-fade-in p, .overlay-fade-in-square p, .overlay-fade-in-portrait p, .overlay-fade-in-landscape p, .overlay-fade-in img, .overlay-fade-in-square img, .overlay-fade-in-portrait img, .overlay-fade-in-landscape img {
+	transition: all 0.2s linear;
+}
+   
 .overlay-fade-in:hover img, .overlay-fade-in-square:hover img, .overlay-fade-in-portrait:hover img, .overlay-fade-in-landscape:hover img {
-  transform: scale(1.2); 
+  	transform: scale(1.2); 
 }
   
-.overlay-fade-in:hover .image-overlay-content, .overlay-fade-in-square:hover .image-overlay-content, .overlay-fade-in-portrait:hover .image-overlay-content, .overlay-fade-in-landscape:hover .image-overlay-content {
-  opacity: 1; 
-}
-  
-.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button, .overlay-fade-in-square:hover h2, .overlay-fade-in-square p, .overlay-fade-in-square .button,.overlay-fade-in-portrait:hover h2, .overlay-fade-in-portrait p, .overlay-fade-in-portrait .button, .overlay-fade-in-landscape:hover h2, .overlay-fade-in-landscape p, .overlay-fade-in-landscape .button    {
-  opacity: 1;
+.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button, .overlay-fade-in-square:hover h2, .overlay-fade-in-square p, .overlay-fade-in-square .button,.overlay-fade-in-portrait:hover h2, .overlay-fade-in-portrait p, .overlay-fade-in-portrait .button, .overlay-fade-in-landscape:hover h2, .overlay-fade-in-landscape p, .overlay-fade-in-landscape .button, .overlay-fade-in:hover .image-overlay-content, .overlay-fade-in-square:hover .image-overlay-content, .overlay-fade-in-portrait:hover .image-overlay-content, .overlay-fade-in-landscape:hover .image-overlay-content   {
+  	opacity: 1;
 }
 
 /*--------------------------------------------------------------------Media Queries --------------*/
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-	.side-nav {
-		padding-left: 50px;
-		position: static;
-	}
-	
-	ul li {
-		display: inline-block;
-		padding-left: 15px;
-	}
 
-	#bottom, h1, h2, p, ul li {
-		text-align: center;
+/*---------------------------------------------------------------------1 Navigation----------*/	
+	.bottom-nav {
+		margin-top: 0;
 	}
 	
 	.icon ul li {
@@ -228,23 +210,20 @@ ul li {
 		display: inline-block;
 	}
 	
+	.side-nav {
+		padding-left: 45px;
+		position: static;
+	}
+	
+	ul li {
+		display: inline-block;
+		padding-left: 15px;
+	}
+	
+/*---------------------------------------------------------------------2 Widths and Heights----------*/
+/*---------------------------------------------------------------------3 Backgrounds----------*/
+/*---------------------------------------------------------------------4 Margins and Padding----------*/
 	#bottom {
-		margin-top: 0;
-	}
-	
-	p {
-		font-size: 14px;
-	}
-	
-	h1 {
-		font-size: 40px;
-	}
-	
-	h2 {
-		font-size: 30px;
-	}
-	
-	.bottom-nav {
 		margin-top: 0;
 	}
 	
@@ -252,6 +231,31 @@ ul li {
 		padding-left: 50px;
 	}
 	
+	
+/*---------------------------------------------------------------------5 Images----------*/
+/*---------------------------------------------------------------------6 Typography----------*/
+	#bottom, h1, h2, p, ul li {
+		text-align: center;
+	}
+
+	h1 {
+		font-family: 'Pacifico', cursive;
+		color: #22bbb4;
+		font-size: 40px;
+	}
+	
+	h2 {
+		font-family: 'Josefin Sans', sans-serif;
+		color: #22bbb4;
+		font-size: 30px;
+	}
+
+	p {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 16px;
+	}
+	
+/*---------------------------------------------------------------------7 Image Hover State----------*/
 }
 
 /* Medium and up */
@@ -269,19 +273,17 @@ ul li {
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-	.icon ul li {
-		float: right;
-		display: inline-block;
-		margin-left: .25rem;
-	}
-	
 	.icon img {
 		padding-right: .25rem;
 		height: 50px;
 		width: 50px;
 	}
-		
-		
+	
+	.icon ul li {
+		float: right;
+		display: inline-block;
+		margin-left: .25rem;
+	}
 }
 
 /* Large and up */
